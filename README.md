@@ -30,27 +30,27 @@ Oyunun çalışması için 10 satır ve 10 sütundan oluşan sayıları içeren 
 ```
 
 ### 2. Projeyi Derleyin ve Çalıştırın
-Projeyi klonladıktan veya indirdikten sonra, BomBom klasörünün bulunduğu dizine terminal (komut satırı) üzerinden gidin.
-BomBom.java dosyasını derleyin:
+*Projeyi klonladıktan veya indirdikten sonra, BomBom klasörünün bulunduğu dizine terminal (komut satırı) üzerinden gidin.
 
+*BomBom.java dosyasını derleyin:
 Bash
 ```
 javac BomBom/BomBom.java
 ```
-Derlenen programı çalıştırın:
+*Derlenen programı çalıştırın:
 Bash
 ```
 java BomBom.BomBom
 ```
 🧠 Çalışma Mantığı
-Programın ana patlatma mantığı kontrolMekanizmasi adlı rekürsif (özyineli) fonksiyonda yer alır.
+*Programın ana patlatma mantığı kontrolMekanizmasi adlı rekürsif (özyineli) fonksiyonda yer alır.
 
-Kullanıcının girdiği koordinattaki sayı (hedef sayı) bir değişkene atanır.
+*Kullanıcının girdiği koordinattaki sayı (hedef sayı) bir değişkene atanır.
 
-kontrolMekanizmasi fonksiyonu, aldığı koordinatın üst, alt, sol ve sağ komşularını kontrol eder.
+*kontrolMekanizmasi fonksiyonu, aldığı koordinatın üst, alt, sol ve sağ komşularını kontrol eder.
 
-Eğer bir komşu, hedef sayı ile aynıysa, hem mevcut koordinatın hem de komşu koordinatın değeri 'x' olarak değiştirilir.
+*Eğer bir komşu, hedef sayı ile aynıysa, hem mevcut koordinatın hem de komşu koordinatın değeri 'x' olarak değiştirilir.
 
-Fonksiyon, bu kez 'x' olarak değiştirilen yeni komşu için kendini tekrar çağırır.
+*Fonksiyon, bu kez 'x' olarak değiştirilen yeni komşu için kendini tekrar çağırır.
 
 Bu işlem, hedef sayıya bağlı ve bitişik başka komşu kalmayana kadar (veya harita sınırlarına ulaşana kadar) devam eder. Bu işleme "Flood Fill" (Taşma Dolgusu) algoritmasının basit bir uygulaması denir.
